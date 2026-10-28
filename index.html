@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#effff5">
+  <meta name="description" content="ToolVerse — kumpulan 50 tools web praktis dengan tampilan green glass.">
+  <title>ToolVerse — All your tools, one place</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
+  <header class="topbar glass">
+    <a class="brand" href="#"><span class="brand-mark">✳</span><span>tool<span class="brand-green">verse</span><small>YOUR DAILY WEB TOOLKIT</small></span></a>
+    <nav><a href="#tools">Tools</a><a href="#about">Tentang</a></nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Ganti tema">☼</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> 50 TOOLS · ONE WORKSPACE</div>
+        <h1>Small tools.<br><span>Big possibilities.</span></h1>
+        <p>Ruang kerja digital yang simpel, cepat, dan nyaman. Temukan tools favoritmu dalam satu tempat dengan sentuhan green glass.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#tools">Jelajahi tools <span>↗</span></a><a class="quiet-link" href="#about">Lihat fitur <span>↓</span></a></div>
+        <div class="hero-stats"><div><b>50</b><span>TOOLS</span></div><i></i><div><b>04</b><span>KATEGORI</span></div><i></i><div><b>100%</b><span>WEB BASED</span></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="float-card float-card-top glass"><span class="mini-icon">✦</span><div><b>Everything in one place</b><small>Ready when you are</small></div><span class="tiny-check">✓</span></div>
+        <div class="dashboard glass">
+          <div class="dash-top"><div class="window-dots"><i></i><i></i><i></i></div><span>toolverse.app</span><span>•••</span></div>
+          <div class="dash-greeting"><small>YOUR WORKSPACE</small><h3>Make it happen.</h3></div>
+          <div class="dash-grid"><div class="dash-tile"><span>⌘</span><b>Quick tools</b><small>Instant utility</small></div><div class="dash-tile active-tile"><span>↗</span><b>Media lab</b><small>Work with media</small></div><div class="dash-tile"><span>⌁</span><b>Text studio</b><small>Write & format</small></div><div class="dash-tile"><span>◈</span><b>Developer</b><small>Build faster</small></div></div>
+          <div class="dash-progress"><div><span>Workspace energy</span><b>88%</b></div><div class="progress-track"><i></i></div></div>
+        </div>
+        <div class="float-card float-card-bottom glass"><span class="round-check">✓</span><div><b>Simple by design</b><small>Less friction, more flow</small></div></div>
+      </div>
+    </section>
+
+    <section class="tool-section" id="tools">
+      <div class="section-head"><div><div class="eyebrow">THE TOOLBOX</div><h2>Find your <span>flow.</span></h2><p>50 tools untuk bantu pekerjaan sehari-hari.</p></div><div class="tool-count"><b id="visibleCount">50</b><span>tools available</span></div></div>
+      <div class="search-row glass"><span class="search-symbol">⌕</span><input id="searchInput" type="search" placeholder="Cari tools, misalnya JSON formatter..." autocomplete="off"><kbd>⌘ K</kbd></div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="Semua">✳ Semua tools <span>50</span></button>
+        <button class="filter" data-category="Media">▣ Media <span>10</span></button>
+        <button class="filter" data-category="Teks">≋ Teks <span>12</span></button>
+        <button class="filter" data-category="Developer">⌘ Developer <span>14</span></button>
+        <button class="filter" data-category="Utilitas">◈ Utilitas <span>14</span></button>
+      </div>
+      <div class="tool-grid" id="toolGrid"></div>
+      <div class="empty-state glass" id="emptyState" hidden><span>⌕</span><h3>Belum ketemu</h3><p>Coba kata kunci atau kategori lain.</p></div>
+      <div class="load-note"><span class="note-dot"></span> Tools berbasis browser berjalan langsung di perangkatmu. Fitur yang membutuhkan layanan eksternal ditandai di panelnya.</div>
+    </section>
+
+    <section class="feature-band glass" id="about"><div class="feature-icon">✧</div><div><div class="eyebrow">BUILT FOR EVERYDAY</div><h2>Tools that feel <span>effortless.</span></h2><p>Antarmuka ringan, pencarian instan, kategori yang jelas, dan desain responsif untuk desktop maupun mobile.</p></div><a href="#tools" class="circle-arrow">↗</a></section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✳</span><span>tool<span class="brand-green">verse</span><small>YOUR DAILY WEB TOOLKIT</small></span></a><span>Made for your everyday workflow.</span><span>© 2026 ToolVerse</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="tool-modal glass" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close icon-btn" id="modalClose" aria-label="Tutup">×</button>
+      <div class="modal-kicker" id="modalCategory">TOOL</div><h2 id="modalTitle">Tool title</h2><p id="modalDescription"></p>
+      <div id="toolPanel"></div>
+      <div class="modal-foot"><span class="status-dot"></span> Pemrosesan lokal jika memungkinkan · ToolVerse</div>
+    </section>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
